@@ -33,7 +33,19 @@
         auto-format = true;
         formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
       }];
+    };
 
+    vesktop = {
+      enable = true;
+      settings = {
+        autoUpdate = false;
+        plugins = {
+          MessageLogger = {
+            enable = true;
+            ignoreSelf = true;
+          };
+        };
+      };
     };
   };
 }
