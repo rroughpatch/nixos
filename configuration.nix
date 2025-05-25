@@ -98,6 +98,7 @@
       fastfetch
       yaak
       code-cursor
+      spotify
       #  thunderbird
     ];
   };
