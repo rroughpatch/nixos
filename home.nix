@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home = {
     username = "lyra";
     homeDirectory = "/home/lyra";
@@ -14,12 +16,11 @@
       enable = true;
       userName = "yves";
       userEmail = "rroughpatch@proton.me";
-      extraConfig = { init.defaultBranch = "main"; };
+      extraConfig = {init.defaultBranch = "main";};
     };
 
     eza = {
       enable = true;
-
     };
 
     helix = {
@@ -33,11 +34,16 @@
         };
       };
 
-      languages.language = [{
-        name = "nix";
-        auto-format = true;
-        formatter.command = "${pkgs.alejandra}/bin/alejandra";
-      }];
+      languages = {
+        language = [
+          {
+            name = "nix";
+            auto-format = true;
+            formatter.command = "${pkgs.alejandra}/bin/alejandra";
+            language-servers = ["nil"];
+          }
+        ];
+      };
     };
 
     vesktop = {
