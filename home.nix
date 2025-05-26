@@ -8,13 +8,6 @@
   programs = {
     home-manager.enable = true;
 
-    git = {
-      enable = true;
-      userName = "yves";
-      userEmail = "rroughpatch@proton.me";
-      extraConfig = {init.defaultBranch = "main";};
-    };
-
     fish = {
       enable = true;
       interactiveShellInit = ''
@@ -37,12 +30,20 @@
       enableFishIntegration = true;
     };
 
+    git = {
+      enable = true;
+      userName = "yves";
+      userEmail = "rroughpatch@proton.me";
+      extraConfig = {init.defaultBranch = "main";};
+    };
+
     eza = {
       enable = true;
     };
 
-    ghostty = {
+    zoxide = {
       enable = true;
+      enableFishIntegration = true;
     };
 
     helix = {
