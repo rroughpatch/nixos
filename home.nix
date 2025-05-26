@@ -24,6 +24,8 @@
         ls = "eza --icons=always --color=always";
         la = "eza -la --icons=always --color=always";
         l = "eza -l --icons=always --color=always";
+
+        cat = "bat";
       };
     };
 
@@ -46,6 +48,15 @@
     zoxide = {
       enable = true;
       enableFishIntegration = true;
+    };
+
+    bat.enable = true;
+
+    yubikey-touch-detector.enable = true;
+
+    thefuck = {
+      enable = true;
+      alias = "fuck";
     };
 
     helix = {
