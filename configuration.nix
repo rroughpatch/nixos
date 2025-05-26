@@ -111,7 +111,8 @@ in {
     fastfetch
     yaak
     neovim
-
+    bun
+    pnpm
 
     # GUI Applications
     unstable.code-cursor
