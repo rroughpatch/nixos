@@ -4,6 +4,12 @@
 
 { config, pkgs, inputs, ... }:
 
+let
+  unstable = import inputs.nixpkgs {
+    system = pkgs.system;
+    config.allowUnfree = true;
+  };
+in
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -93,17 +99,10 @@
     description = "lyra";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
-      neovim
-      fastfetch
-      yaak
-      code-cursor
-      spotify
       #  thunderbird
     ];
   };
 
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -111,6 +110,13 @@
   environment.systemPackages = with pkgs;
     [
       inputs.alejandra.defaultPackage."${pkgs.system}"
+      nil
+      neovim
+      fastfetch
+      yaak
+      spotify
+      ungoogled-chromium
+      unstable.code-cursor
       #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       #  wget
     ];
