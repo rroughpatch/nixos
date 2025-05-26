@@ -106,14 +106,17 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    inputs.alejandra.defaultPackage."${pkgs.system}"
-    nil
-    neovim
+    # CLI
+    inputs.alejandra.defaultPackage."${pkgs.system}" # Nix formatter
     fastfetch
     yaak
+    neovim
+
+
+    # GUI Applications
+    unstable.code-cursor
     spotify
     ungoogled-chromium
-    unstable.code-cursor
   ];
 
   system.stateVersion = "25.05";

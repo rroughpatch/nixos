@@ -21,10 +21,20 @@
         set fish_greeting # Disable greeting
       '';
       shellAliases = {
+        ".." = "cd ..";
+        "..." = "cd ../..";
+
+        dot = "cd ~/dotfiles";
+
         ls = "eza --icons=always --color=always";
         la = "eza -la --icons=always --color=always";
         l = "eza -l --icons=always --color=always";
       };
+    };
+
+    starship = {
+      enable = true;
+      enableFishIntegration = true;
     };
 
     eza = {
