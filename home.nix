@@ -8,6 +8,8 @@
   programs = {
     home-manager.enable = true;
 
+    ghostty.enable = true;
+
     fish = {
       enable = true;
       interactiveShellInit = ''
