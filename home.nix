@@ -19,7 +19,15 @@
       extraConfig = {init.defaultBranch = "main";};
     };
 
+    fish = {
+      enable = true;
+    };
+
     eza = {
+      enable = true;
+    };
+
+    ghostty = {
       enable = true;
     };
 

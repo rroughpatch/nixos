@@ -22,7 +22,7 @@
     nixpkgs,
     ...
   } @ inputs: {
-    formatter.x86_64-linux = alejandra.formatter;
+    formatter.x86_64-linux = alejandra.defaultPackage.x86_64-linux;
     nixosConfigurations = {
       jasmine = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
