@@ -52,8 +52,6 @@
 
     bat.enable = true;
 
-    yubikey-touch-detector.enable = true;
-
     thefuck = {
       enable = true;
       alias = "fuck";
