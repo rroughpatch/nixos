@@ -19,6 +19,8 @@
 
         dot = "cd ~/dotfiles";
 
+        cd = "z";
+
         ls = "eza --icons=always --color=always";
         la = "eza -la --icons=always --color=always";
         l = "eza -l --icons=always --color=always";
