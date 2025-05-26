@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home = {
     username = "lyra";
     homeDirectory = "/home/lyra";
@@ -21,6 +17,14 @@
 
     fish = {
       enable = true;
+      interactiveShellInit = ''
+        set fish_greeting # Disable greeting
+      '';
+      shellAliases = {
+        ls = "eza --icons=always --color=always";
+        la = "eza -la --icons=always --color=always";
+        l = "eza -l --icons=always --color=always";
+      };
     };
 
     eza = {
