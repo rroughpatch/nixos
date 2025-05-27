@@ -113,6 +113,7 @@ in {
     neovim
     bun
     pnpm
+    biome
 
     # GUI Applications
     unstable.code-cursor
